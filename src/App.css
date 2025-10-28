@@ -1,13 +1,12 @@
 .login-icon{
  margin-right :5px;
  padding-top: 4px;
-
 }
-
 .login-button{
   display: flex;
   justify-content: flex-end;
   margin: 20px;
+  cursor: pointer;
 }
 .nav-section{
   display: flex;
@@ -19,6 +18,7 @@
 }
 .menu-list li{
   padding: 10px;
+  cursor: pointer;
 }
 .menu-area{
   display: flex;
@@ -30,7 +30,7 @@
 }
 #search-input{
   border:none;
-  padding: 5px;
+  padding-left: 30px;
   outline: none;
   border-bottom: 1px solid #000;
 }
@@ -38,11 +38,13 @@
   padding: 20px;
   font-size: 16px;
 }
+#search-input:focus::placeholder{
+  opacity: 0;
+}
 .search-icon{
   position: absolute;
   top: 5px;
 }
 .col-lg-3 img{
-  width: 400px;
-  border: 1px solid #000;
+  width: 250px;
 }
