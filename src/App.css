@@ -1,0 +1,48 @@
+.login-icon{
+ margin-right :5px;
+ padding-top: 4px;
+
+}
+
+.login-button{
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+.nav-section{
+  display: flex;
+  justify-content: center;
+}
+.menu-list{
+  display: flex;
+  list-style: none;
+}
+.menu-list li{
+  padding: 10px;
+}
+.menu-area{
+  display: flex;
+  justify-content: center;
+}
+.search-area{
+  margin-left: 50px;
+  position: relative;
+}
+#search-input{
+  border:none;
+  padding: 5px;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+#search-input::placeholder{
+  padding: 20px;
+  font-size: 16px;
+}
+.search-icon{
+  position: absolute;
+  top: 5px;
+}
+.col-lg-3 img{
+  width: 400px;
+  border: 1px solid #000;
+}
