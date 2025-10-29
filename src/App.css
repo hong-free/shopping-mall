@@ -18,6 +18,7 @@
 }
 .menu-list li{
   padding: 10px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 .menu-area{
@@ -46,5 +47,32 @@
   top: 5px;
 }
 .col-lg-3 img{
-  width: 250px;
+  max-width: 100%;
+}
+
+form{
+  margin: 0 auto;
+  width: 70%;
+}
+/*제품상세*/
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: .3s;
+}
+.card{
+  margin-bottom: 10px;
+   font-size: 14px;;
+   border:0;
+   padding: 10px;
+ --bs-border-opacity: 1;
+ 
+
+}
+.card-title{
+  font-size: 16px;
+}
+.card-price{
+  font-size: 16px;
+  font-weight: bold;
 }

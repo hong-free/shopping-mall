@@ -5,6 +5,8 @@ import Login from "./page/Login";
 import ProductDetail from "./page/ProductDetail";
 import Navbar from "./component/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useState } from "react";
+import PrivateRoute from "./route/PrivateRoute";
 
 //1.전체상품페이지, 로그인, 상품상세페이지
 //1-1 네비게이션바를 만든다
@@ -17,13 +19,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //8.상품을 검핵할수 있다.
 
 function App() {
+  const [authenticate, setAuthenticate] = useState(false);
+  useEffect(() => {
+    console.log(authenticate);
+  }, [authenticate]);
   return (
     <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<ProductAll />} />
-        <Route path="login" element={<Login />} />
-        <Route path="Product/:id" element={<ProductDetail />} />
+        <Route
+          path="login"
+          element={<Login setAuthenticate={setAuthenticate} />}
+        />
+        <Route
+          path="Product/:id"
+          element={<PrivateRoute authenticate={authenticate} />}
+        />
       </Routes>
     </div>
   );
