@@ -19,13 +19,13 @@ import PrivateRoute from "./route/PrivateRoute";
 //8.상품을 검핵할수 있다.
 
 function App() {
-  const [authenticate, setAuthenticate] = useState(false);
+  let [authenticate, setAuthenticate] = useState(false);
   useEffect(() => {
     console.log(authenticate);
   }, [authenticate]);
   return (
     <div>
-      <Navbar />
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path="/" element={<ProductAll />} />
         <Route
