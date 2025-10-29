@@ -23,7 +23,7 @@ const Navbar = () => {
     navigate("/");
   };
   const search = (event) => {
-    if(event.key==="Enter"){
+    if (event.key === "Enter") {
       let keyword = event.target.value;
       navigate(`/?q=${keyword}`);
     }
@@ -47,8 +47,12 @@ const Navbar = () => {
       </div>
       <div className="menu-area">
         <ul className="menu-list">
-          {menuList.map((menu) => (
-            <li>{menu}</li>
+          {menuList.map((menu, index) => (
+            <li>
+              <a href="#" key={index}>
+                {menu}
+              </a>
+            </li>
           ))}
         </ul>
         <div className="search-area">
@@ -57,7 +61,7 @@ const Navbar = () => {
             id="search-input"
             placeholder="제품검색"
             type="text"
-            onKeyPress={(event)=>search(event)}
+            onKeyPress={(event) => search(event)}
           />
         </div>
       </div>

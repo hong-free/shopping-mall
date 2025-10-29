@@ -7,7 +7,7 @@ const ProductCard = ({ item }) => {
     navigate(`/product/${item.id}`);
   };
   return (
-    <div className="card border-0" onClick={showDetail} >
+    <div className="card border-0" onClick={showDetail}>
       <div>
         <img src={item?.img} />
       </div>
@@ -17,7 +17,6 @@ const ProductCard = ({ item }) => {
         <div className="card-price">\{item?.price}</div>
         <div>{item?.new == true ? "신제품" : <br />}</div>
       </div>
- 
     </div>
   );
 };
