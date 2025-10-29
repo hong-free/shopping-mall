@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate} from "react-router";
+import { useNavigate } from "react-router";
 
 const Navbar = () => {
   const menuList = [
@@ -19,6 +19,15 @@ const Navbar = () => {
   const goToLogin = () => {
     navigate("/login");
   };
+  const goToHome = () => {
+    navigate("/");
+  };
+  const search = (event) => {
+    if(event.key==="Enter"){
+      let keyword = event.target.value;
+      navigate(`/?q=${keyword}`);
+    }
+  };
   return (
     <div>
       <div>
@@ -29,6 +38,8 @@ const Navbar = () => {
       </div>
       <div className="nav-section">
         <img
+          className="logo"
+          onClick={goToHome}
           width={100}
           src="https://brandyhq.com/wp-content/uploads/2024/12/H-and-M-Logo.jpg"
           alt="logo"
@@ -42,7 +53,12 @@ const Navbar = () => {
         </ul>
         <div className="search-area">
           <FontAwesomeIcon className="search-icon" icon={faSearch} />
-          <input id="search-input" placeholder="제품검색" type="text" />
+          <input
+            id="search-input"
+            placeholder="제품검색"
+            type="text"
+            onKeyPress={(event)=>search(event)}
+          />
         </div>
       </div>
     </div>
