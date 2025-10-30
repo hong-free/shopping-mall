@@ -22,23 +22,24 @@ const ProductDetail = () => {
     <div>
       <Container>
         <Row>
-          <Col className="product-img">
+          <Col className="product-img" lg={6} sm={9}>
             <img src={product?.img} />
           </Col>
-          <Col>
-            <div>{product?.title}</div>
-            <div>{product?.price}</div>
-            <Dropdown>
+          <Col className="product-des">
+            <div>{product?.choice == true ? "Conscious choice" : <br />}</div>
+            <div className="card-title">{product?.title}</div>
+            <div className="card-price">\{product?.price}</div>
+            {/* <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Dropdown Button
+                Size
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                <Dropdown.Item href="#/action-1">S</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">M</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">L</Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
           </Col>
         </Row>
       </Container>

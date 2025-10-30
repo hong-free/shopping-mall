@@ -5,16 +5,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router";
 
 const Navbar = ({ authenticate, setAuthenticate }) => {
-  const menuList = [
-    "여성",
-    "Divided",
-    "남성",
-    "신행아/유아",
-    "아동",
-    "H&M Home",
-    "Sale",
-    "지속가능성",
-  ];
+  const menuList = ["여성", "남성", "아동", "Sale"];
   let navigate = useNavigate();
 
   const goToHome = () => {
@@ -26,6 +17,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
       navigate(`/?q=${keyword}`);
     }
   };
+
   return (
     <div>
       <div>
@@ -62,6 +54,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
             </li>
           ))}
         </ul>
+
         <div className="search-area">
           <FontAwesomeIcon className="search-icon" icon={faSearch} />
           <input
